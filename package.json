@@ -1,0 +1,27 @@
+{
+  "name": "libraryapi_expressserver",
+  "version": "1.0.0",
+  "description": "A basic library API hosted in an Express server.",
+  "main": "ExpressServer.js",
+  "scripts": {
+    "dev": "node ExpressServer.js",
+    "test": "npx nodemon ExpressServer.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CarlosAEC-KS/LibraryAPI.git"
+  },
+  "keywords": [
+    "Express",
+    "API"
+  ],
+  "author": "Carlos Andrés Escalona Contreras",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CarlosAEC-KS/LibraryAPI/issues"
+  },
+  "homepage": "https://github.com/CarlosAEC-KS/LibraryAPI#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
