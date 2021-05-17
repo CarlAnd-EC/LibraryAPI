@@ -23,7 +23,7 @@ db.on('error',console.error.bind(console,"Connection error"));
 
 app.use(express.json());
 app.use(express.static('views'));
-app.use('/books',book);
+app.use('/books', book);
 
 app.get('/',(req,res)=>{
    res.sendFile(path.join(publicURL+'/index.html'));

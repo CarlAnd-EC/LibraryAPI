@@ -3,23 +3,21 @@
 * Alias: Routes addressing
 * Author: Carlos Andrés Escalona Contreras 
 * Proposed by: Javier Luna
-* Created: 06/05/2021       Updated: 13/05/2021
+* Created: 06/05/2021       Updated: 14/05/2021
 * Description:
  ----------------------------------------------------------*/
- const express = require('express');
- const router = express.Router();
- 
- const path = require('path');
- const controllerBook = require('../controllers/book');
- 
- router.get('/search',controllerBook.search);
- router.post('/add', controllerBook.addBook);
- router.update('/update',controllerBook.updateBook);
- router.delete('/delete',controllerBook.deleteBook);
- 
- router.get('/',(req,res)=>{
-    res.sendFile(path.join(__dirname+'/../views/index.html'));
- });
- 
- 
- module.exports = router;
+const express = require('express');
+const router = express.Router();
+
+const path = require('path');
+const controllerBook = require('../controllers/book');
+
+router.get('/',controllerBook.searchAll);
+router.get('/searchByGUID',controllerBook.searchByGUID);
+router.get('/searchByParams',controllerBook.searchByParams);
+router.post('/add', controllerBook.addBook);
+router.put('/update',controllerBook.updateBook);
+router.delete('/deleteByGUID',controllerBook.deleteByGUID);
+router.delete('/deleteByParams',controllerBook.deleteByParams);
+router.delete('/reset',controllerBook.deleteAll);
+module.exports = router;
